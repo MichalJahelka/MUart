@@ -1,0 +1,255 @@
+object SettingsForm: TSettingsForm
+  Left = 583
+  Height = 412
+  Top = 240
+  Width = 251
+  AutoSize = True
+  Caption = 'Nastavení'
+  ClientHeight = 412
+  ClientWidth = 251
+  OnCreate = FormCreate
+  LCLVersion = '3.6.0.0'
+  object ChannelCB: TComboBox
+    AnchorSideTop.Control = Shape1
+    AnchorSideTop.Side = asrCenter
+    Left = 56
+    Height = 35
+    Top = 19
+    Width = 176
+    BorderSpacing.Right = 16
+    ItemHeight = 0
+    ItemIndex = 0
+    Items.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+    )
+    Style = csDropDownList
+    TabOrder = 0
+    Text = '1'
+    OnChange = ChannelCBChange
+  end
+  object Shape1: TShape
+    Tag = 1
+    Left = 16
+    Height = 25
+    Top = 24
+    Width = 25
+    BorderSpacing.Left = 16
+    BorderSpacing.Top = 16
+    Shape = stEllipse
+  end
+  object RychlostEdit: TRangeInput
+    AnchorSideLeft.Control = Shape1
+    AnchorSideTop.Control = ChannelCB
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = ChannelCB
+    AnchorSideRight.Side = asrBottom
+    Left = 16
+    Height = 58
+    Top = 62
+    Width = 216
+    Caption = 'Rychlost'
+    EmbeddedLabel.AnchorSideLeft.Control = RychlostEdit
+    EmbeddedLabel.AnchorSideTop.Control = RychlostEdit
+    EmbeddedLabel.AnchorSideRight.Control = RychlostEdit
+    EmbeddedLabel.Left = 0
+    EmbeddedLabel.Height = 23
+    EmbeddedLabel.Top = 0
+    EmbeddedLabel.Width = 64
+    EmbeddedLabel.Caption = 'Rychlost'
+    EmbeddedEdit.AnchorSideTop.Side = asrBottom
+    EmbeddedEdit.AnchorSideRight.Control = RychlostEdit
+    EmbeddedEdit.AnchorSideRight.Side = asrBottom
+    EmbeddedEdit.Left = 0
+    EmbeddedEdit.Height = 33
+    EmbeddedEdit.Top = 25
+    EmbeddedEdit.Width = 216
+    EmbeddedEdit.Anchors = [akTop, akLeft, akRight]
+    EmbeddedEdit.BorderSpacing.Top = 2
+    EmbeddedEdit.Color = 12171775
+    EmbeddedEdit.TabOrder = 0
+    EmbeddedEdit.OnChange = RychlostEditChange
+    EmbeddedEdit.MinRange = 0
+    EmbeddedEdit.MaxRange = 2147483647
+    EmbeddedEdit.RangeColor = 8978431
+    EmbeddedEdit.NormalColor = clDefault
+    EmbeddedEdit.ErrColor = 12171775
+    EmbeddedEdit.Value = 0
+    EmbeddedEdit.IsHex = False
+    EmbeddedEdit.HexDigits = 2
+    LabelPosition = lpAbove
+    MinRange = 0
+    MaxRange = 2147483647
+    RangeColor = 8978431
+    NormalColor = clDefault
+    ErrColor = 12171775
+    Value = 0
+    IsHex = False
+    HexDigits = 2
+    ShowHint = False
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 8
+    TabOrder = 1
+  end
+  object BitsEdit: TRangeInput
+    AnchorSideLeft.Control = Shape1
+    AnchorSideTop.Control = RychlostEdit
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = ChannelCB
+    AnchorSideRight.Side = asrBottom
+    Left = 16
+    Height = 58
+    Top = 124
+    Width = 216
+    Caption = 'Bitů'
+    EmbeddedLabel.AnchorSideLeft.Control = BitsEdit
+    EmbeddedLabel.AnchorSideTop.Control = BitsEdit
+    EmbeddedLabel.AnchorSideRight.Control = BitsEdit
+    EmbeddedLabel.Left = 0
+    EmbeddedLabel.Height = 23
+    EmbeddedLabel.Top = 0
+    EmbeddedLabel.Width = 30
+    EmbeddedLabel.Caption = 'Bitů'
+    EmbeddedEdit.AnchorSideTop.Side = asrBottom
+    EmbeddedEdit.AnchorSideRight.Control = BitsEdit
+    EmbeddedEdit.AnchorSideRight.Side = asrBottom
+    EmbeddedEdit.Left = 0
+    EmbeddedEdit.Height = 33
+    EmbeddedEdit.Top = 25
+    EmbeddedEdit.Width = 216
+    EmbeddedEdit.Anchors = [akTop, akLeft, akRight]
+    EmbeddedEdit.BorderSpacing.Top = 2
+    EmbeddedEdit.Color = 12171775
+    EmbeddedEdit.TabOrder = 0
+    EmbeddedEdit.OnChange = BitsEditChange
+    EmbeddedEdit.MinRange = 6
+    EmbeddedEdit.MaxRange = 9
+    EmbeddedEdit.RangeColor = 8978431
+    EmbeddedEdit.NormalColor = clDefault
+    EmbeddedEdit.ErrColor = 12171775
+    EmbeddedEdit.Value = 0
+    EmbeddedEdit.IsHex = False
+    EmbeddedEdit.HexDigits = 2
+    LabelPosition = lpAbove
+    MinRange = 6
+    MaxRange = 9
+    RangeColor = 8978431
+    NormalColor = clDefault
+    ErrColor = 12171775
+    Value = 0
+    IsHex = False
+    HexDigits = 2
+    ShowHint = False
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 4
+    TabOrder = 2
+  end
+  object Label1: TLabel
+    AnchorSideLeft.Control = Shape1
+    AnchorSideTop.Control = BitsEdit
+    AnchorSideTop.Side = asrBottom
+    Left = 16
+    Height = 23
+    Top = 186
+    Width = 35
+    BorderSpacing.Top = 4
+    Caption = 'Stop'
+  end
+  object StopsCB: TComboBox
+    AnchorSideLeft.Control = Shape1
+    AnchorSideTop.Control = Label1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = ChannelCB
+    AnchorSideRight.Side = asrBottom
+    Left = 16
+    Height = 35
+    Top = 211
+    Width = 216
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 2
+    ItemHeight = 0
+    ItemIndex = 0
+    Items.Strings = (
+      '1'
+      '2'
+    )
+    Style = csDropDownList
+    TabOrder = 3
+    Text = '1'
+    OnChange = StopsCBChange
+  end
+  object Label2: TLabel
+    AnchorSideLeft.Control = Shape1
+    AnchorSideTop.Control = StopsCB
+    AnchorSideTop.Side = asrBottom
+    Left = 16
+    Height = 23
+    Top = 250
+    Width = 45
+    BorderSpacing.Top = 4
+    Caption = 'Parita'
+  end
+  object ParityCB: TComboBox
+    AnchorSideLeft.Control = Shape1
+    AnchorSideTop.Control = Label2
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = ChannelCB
+    AnchorSideRight.Side = asrBottom
+    Left = 16
+    Height = 35
+    Top = 275
+    Width = 216
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 2
+    ItemHeight = 0
+    ItemIndex = 0
+    Items.Strings = (
+      'Žádná'
+      'Lichá'
+      'Sudá'
+    )
+    Style = csDropDownList
+    TabOrder = 4
+    Text = 'Žádná'
+    OnChange = ParityCBChange
+  end
+  object BitBtn1: TBitBtn
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = FontBtn
+    AnchorSideTop.Side = asrBottom
+    Left = 56
+    Height = 37
+    Top = 365
+    Width = 138
+    BorderSpacing.Top = 8
+    BorderSpacing.Bottom = 15
+    Caption = 'Hotovo'
+    Default = True
+    Kind = bkOK
+    ModalResult = 1
+    TabOrder = 5
+  end
+  object FontBtn: TBitBtn
+    AnchorSideLeft.Control = Owner
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = ParityCB
+    AnchorSideTop.Side = asrBottom
+    Left = 57
+    Height = 39
+    Top = 318
+    Width = 136
+    BorderSpacing.Top = 8
+    Caption = 'Font'
+    OnClick = FontBtnClick
+    TabOrder = 6
+  end
+  object FontDialog1: TFontDialog
+    MinFontSize = 0
+    MaxFontSize = 0
+    Left = 200
+    Top = 328
+  end
+end

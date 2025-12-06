@@ -1,0 +1,1245 @@
+object MainForm: TMainForm
+  Left = 249
+  Height = 730
+  Top = 105
+  Width = 1033
+  Caption = 'MUart'
+  ClientHeight = 730
+  ClientWidth = 1033
+  OnClose = FormClose
+  OnCreate = FormCreate
+  LCLVersion = '3.6.0.0'
+  inline Output: TSynEdit
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = DeviceSelect1
+    AnchorSideBottom.Control = Input
+    Left = 4
+    Height = 681
+    Top = 4
+    Width = 818
+    BorderSpacing.Left = 4
+    BorderSpacing.Top = 4
+    BorderSpacing.Right = 12
+    BorderSpacing.Bottom = 8
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Font.Height = -19
+    Font.Name = 'DejaVu Sans Mono'
+    Font.Pitch = fpFixed
+    Font.Quality = fqNonAntialiased
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+    Gutter.Visible = False
+    Gutter.Width = 63
+    Gutter.MouseActions = <>
+    RightGutter.Width = 0
+    RightGutter.MouseActions = <>
+    Keystrokes = <    
+      item
+        Command = ecUp
+        ShortCut = 38
+      end    
+      item
+        Command = ecSelUp
+        ShortCut = 8230
+      end    
+      item
+        Command = ecScrollUp
+        ShortCut = 16422
+      end    
+      item
+        Command = ecDown
+        ShortCut = 40
+      end    
+      item
+        Command = ecSelDown
+        ShortCut = 8232
+      end    
+      item
+        Command = ecScrollDown
+        ShortCut = 16424
+      end    
+      item
+        Command = ecLeft
+        ShortCut = 37
+      end    
+      item
+        Command = ecSelLeft
+        ShortCut = 8229
+      end    
+      item
+        Command = ecWordLeft
+        ShortCut = 16421
+      end    
+      item
+        Command = ecSelWordLeft
+        ShortCut = 24613
+      end    
+      item
+        Command = ecRight
+        ShortCut = 39
+      end    
+      item
+        Command = ecSelRight
+        ShortCut = 8231
+      end    
+      item
+        Command = ecWordRight
+        ShortCut = 16423
+      end    
+      item
+        Command = ecSelWordRight
+        ShortCut = 24615
+      end    
+      item
+        Command = ecPageDown
+        ShortCut = 34
+      end    
+      item
+        Command = ecSelPageDown
+        ShortCut = 8226
+      end    
+      item
+        Command = ecPageBottom
+        ShortCut = 16418
+      end    
+      item
+        Command = ecSelPageBottom
+        ShortCut = 24610
+      end    
+      item
+        Command = ecPageUp
+        ShortCut = 33
+      end    
+      item
+        Command = ecSelPageUp
+        ShortCut = 8225
+      end    
+      item
+        Command = ecPageTop
+        ShortCut = 16417
+      end    
+      item
+        Command = ecSelPageTop
+        ShortCut = 24609
+      end    
+      item
+        Command = ecLineStart
+        ShortCut = 36
+      end    
+      item
+        Command = ecSelLineStart
+        ShortCut = 8228
+      end    
+      item
+        Command = ecEditorTop
+        ShortCut = 16420
+      end    
+      item
+        Command = ecSelEditorTop
+        ShortCut = 24612
+      end    
+      item
+        Command = ecLineEnd
+        ShortCut = 35
+      end    
+      item
+        Command = ecSelLineEnd
+        ShortCut = 8227
+      end    
+      item
+        Command = ecEditorBottom
+        ShortCut = 16419
+      end    
+      item
+        Command = ecSelEditorBottom
+        ShortCut = 24611
+      end    
+      item
+        Command = ecToggleMode
+        ShortCut = 45
+      end    
+      item
+        Command = ecCopy
+        ShortCut = 16429
+      end    
+      item
+        Command = ecPaste
+        ShortCut = 8237
+      end    
+      item
+        Command = ecDeleteChar
+        ShortCut = 46
+      end    
+      item
+        Command = ecCut
+        ShortCut = 8238
+      end    
+      item
+        Command = ecDeleteLastChar
+        ShortCut = 8
+      end    
+      item
+        Command = ecDeleteLastChar
+        ShortCut = 8200
+      end    
+      item
+        Command = ecDeleteLastWord
+        ShortCut = 16392
+      end    
+      item
+        Command = ecUndo
+        ShortCut = 32776
+      end    
+      item
+        Command = ecRedo
+        ShortCut = 40968
+      end    
+      item
+        Command = ecLineBreak
+        ShortCut = 13
+      end    
+      item
+        Command = ecSelectAll
+        ShortCut = 16449
+      end    
+      item
+        Command = ecCopy
+        ShortCut = 16451
+      end    
+      item
+        Command = ecBlockIndent
+        ShortCut = 24649
+      end    
+      item
+        Command = ecLineBreak
+        ShortCut = 16461
+      end    
+      item
+        Command = ecInsertLine
+        ShortCut = 16462
+      end    
+      item
+        Command = ecDeleteWord
+        ShortCut = 16468
+      end    
+      item
+        Command = ecBlockUnindent
+        ShortCut = 24661
+      end    
+      item
+        Command = ecPaste
+        ShortCut = 16470
+      end    
+      item
+        Command = ecCut
+        ShortCut = 16472
+      end    
+      item
+        Command = ecDeleteLine
+        ShortCut = 16473
+      end    
+      item
+        Command = ecDeleteEOL
+        ShortCut = 24665
+      end    
+      item
+        Command = ecUndo
+        ShortCut = 16474
+      end    
+      item
+        Command = ecRedo
+        ShortCut = 24666
+      end    
+      item
+        Command = ecGotoMarker0
+        ShortCut = 16432
+      end    
+      item
+        Command = ecGotoMarker1
+        ShortCut = 16433
+      end    
+      item
+        Command = ecGotoMarker2
+        ShortCut = 16434
+      end    
+      item
+        Command = ecGotoMarker3
+        ShortCut = 16435
+      end    
+      item
+        Command = ecGotoMarker4
+        ShortCut = 16436
+      end    
+      item
+        Command = ecGotoMarker5
+        ShortCut = 16437
+      end    
+      item
+        Command = ecGotoMarker6
+        ShortCut = 16438
+      end    
+      item
+        Command = ecGotoMarker7
+        ShortCut = 16439
+      end    
+      item
+        Command = ecGotoMarker8
+        ShortCut = 16440
+      end    
+      item
+        Command = ecGotoMarker9
+        ShortCut = 16441
+      end    
+      item
+        Command = ecSetMarker0
+        ShortCut = 24624
+      end    
+      item
+        Command = ecSetMarker1
+        ShortCut = 24625
+      end    
+      item
+        Command = ecSetMarker2
+        ShortCut = 24626
+      end    
+      item
+        Command = ecSetMarker3
+        ShortCut = 24627
+      end    
+      item
+        Command = ecSetMarker4
+        ShortCut = 24628
+      end    
+      item
+        Command = ecSetMarker5
+        ShortCut = 24629
+      end    
+      item
+        Command = ecSetMarker6
+        ShortCut = 24630
+      end    
+      item
+        Command = ecSetMarker7
+        ShortCut = 24631
+      end    
+      item
+        Command = ecSetMarker8
+        ShortCut = 24632
+      end    
+      item
+        Command = ecSetMarker9
+        ShortCut = 24633
+      end    
+      item
+        Command = EcFoldLevel1
+        ShortCut = 41009
+      end    
+      item
+        Command = EcFoldLevel2
+        ShortCut = 41010
+      end    
+      item
+        Command = EcFoldLevel3
+        ShortCut = 41011
+      end    
+      item
+        Command = EcFoldLevel4
+        ShortCut = 41012
+      end    
+      item
+        Command = EcFoldLevel5
+        ShortCut = 41013
+      end    
+      item
+        Command = EcFoldLevel6
+        ShortCut = 41014
+      end    
+      item
+        Command = EcFoldLevel7
+        ShortCut = 41015
+      end    
+      item
+        Command = EcFoldLevel8
+        ShortCut = 41016
+      end    
+      item
+        Command = EcFoldLevel9
+        ShortCut = 41017
+      end    
+      item
+        Command = EcFoldLevel0
+        ShortCut = 41008
+      end    
+      item
+        Command = EcFoldCurrent
+        ShortCut = 41005
+      end    
+      item
+        Command = EcUnFoldCurrent
+        ShortCut = 41003
+      end    
+      item
+        Command = EcToggleMarkupWord
+        ShortCut = 32845
+      end    
+      item
+        Command = ecNormalSelect
+        ShortCut = 24654
+      end    
+      item
+        Command = ecColumnSelect
+        ShortCut = 24643
+      end    
+      item
+        Command = ecLineSelect
+        ShortCut = 24652
+      end    
+      item
+        Command = ecTab
+        ShortCut = 9
+      end    
+      item
+        Command = ecShiftTab
+        ShortCut = 8201
+      end    
+      item
+        Command = ecMatchBracket
+        ShortCut = 24642
+      end    
+      item
+        Command = ecColSelUp
+        ShortCut = 40998
+      end    
+      item
+        Command = ecColSelDown
+        ShortCut = 41000
+      end    
+      item
+        Command = ecColSelLeft
+        ShortCut = 40997
+      end    
+      item
+        Command = ecColSelRight
+        ShortCut = 40999
+      end    
+      item
+        Command = ecColSelPageDown
+        ShortCut = 40994
+      end    
+      item
+        Command = ecColSelPageBottom
+        ShortCut = 57378
+      end    
+      item
+        Command = ecColSelPageUp
+        ShortCut = 40993
+      end    
+      item
+        Command = ecColSelPageTop
+        ShortCut = 57377
+      end    
+      item
+        Command = ecColSelLineStart
+        ShortCut = 40996
+      end    
+      item
+        Command = ecColSelLineEnd
+        ShortCut = 40995
+      end    
+      item
+        Command = ecColSelEditorTop
+        ShortCut = 57380
+      end    
+      item
+        Command = ecColSelEditorBottom
+        ShortCut = 57379
+      end>
+    MouseActions = <>
+    MouseTextActions = <>
+    MouseSelActions = <>
+    Lines.Strings = (
+      'Output'
+    )
+    VisibleSpecialChars = [vscSpace, vscTabAtLast]
+    SelectedColor.BackPriority = 50
+    SelectedColor.ForePriority = 50
+    SelectedColor.FramePriority = 50
+    SelectedColor.BoldPriority = 50
+    SelectedColor.ItalicPriority = 50
+    SelectedColor.UnderlinePriority = 50
+    SelectedColor.StrikeOutPriority = 50
+    BracketHighlightStyle = sbhsBoth
+    BracketMatchColor.Background = clNone
+    BracketMatchColor.Foreground = clNone
+    BracketMatchColor.Style = [fsBold]
+    FoldedCodeColor.Background = clNone
+    FoldedCodeColor.Foreground = clGray
+    FoldedCodeColor.FrameColor = clGray
+    MouseLinkColor.Background = clNone
+    MouseLinkColor.Foreground = clBlue
+    LineHighlightColor.Background = clNone
+    LineHighlightColor.Foreground = clNone
+    inline SynLeftGutterPartList1: TSynGutterPartList
+      object SynGutterMarks1: TSynGutterMarks
+        Width = 24
+        MouseActions = <>
+      end
+      object SynGutterLineNumber1: TSynGutterLineNumber
+        Width = 23
+        MouseActions = <>
+        MarkupInfo.Background = clBtnFace
+        MarkupInfo.Foreground = clNone
+        DigitCount = 2
+        ShowOnlyLineNumbersMultiplesOf = 1
+        ZeroStart = False
+        LeadingZeros = False
+      end
+      object SynGutterChanges1: TSynGutterChanges
+        Width = 4
+        MouseActions = <>
+        ModifiedColor = 59900
+        SavedColor = clGreen
+      end
+      object SynGutterSeparator1: TSynGutterSeparator
+        Width = 2
+        MouseActions = <>
+        MarkupInfo.Background = clWhite
+        MarkupInfo.Foreground = clGray
+      end
+      object SynGutterCodeFolding1: TSynGutterCodeFolding
+        MouseActions = <>
+        MarkupInfo.Background = clNone
+        MarkupInfo.Foreground = clGray
+        MouseActionsExpanded = <>
+        MouseActionsCollapsed = <>
+      end
+    end
+  end
+  object DeviceSelect1: TComboBox
+    Tag = 1
+    AnchorSideTop.Control = Shape1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 834
+    Height = 35
+    Top = 41
+    Width = 191
+    Anchors = [akTop, akRight]
+    BorderSpacing.Top = 8
+    BorderSpacing.Right = 8
+    ItemHeight = 0
+    TabOrder = 1
+    Text = 'Select device'
+    OnGetItems = DeviceSelect1GetItems
+  end
+  object Shape1: TShape
+    Tag = 1
+    AnchorSideLeft.Control = DeviceSelect1
+    AnchorSideTop.Control = Owner
+    Left = 834
+    Height = 25
+    Top = 8
+    Width = 25
+    BorderSpacing.Top = 8
+    Brush.Color = clBlack
+    OnMouseUp = Shape1MouseUp
+    Shape = stEllipse
+  end
+  object ShowCB1: TCheckBox
+    Tag = 1
+    AnchorSideLeft.Control = Shape1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = Shape1
+    AnchorSideTop.Side = asrCenter
+    Left = 867
+    Height = 25
+    Top = 8
+    Width = 88
+    BorderSpacing.Left = 8
+    Caption = 'Zobrazit'
+    Checked = True
+    State = cbChecked
+    TabOrder = 2
+    OnChange = ShowCB1Change
+  end
+  object Shape2: TShape
+    Tag = 2
+    AnchorSideLeft.Control = DeviceSelect2
+    AnchorSideTop.Control = DeviceSelect1
+    AnchorSideTop.Side = asrBottom
+    Left = 834
+    Height = 25
+    Top = 84
+    Width = 25
+    BorderSpacing.Top = 8
+    Brush.Color = clBlue
+    OnMouseUp = Shape1MouseUp
+    Shape = stEllipse
+  end
+  object ShowCB2: TCheckBox
+    Tag = 2
+    AnchorSideLeft.Control = ShowCB1
+    AnchorSideTop.Control = Shape2
+    AnchorSideTop.Side = asrCenter
+    Left = 867
+    Height = 25
+    Top = 84
+    Width = 88
+    Caption = 'Zobrazit'
+    Checked = True
+    State = cbChecked
+    TabOrder = 3
+    OnChange = ShowCB1Change
+  end
+  object DeviceSelect2: TComboBox
+    Tag = 2
+    AnchorSideTop.Control = Shape2
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 834
+    Height = 35
+    Top = 117
+    Width = 191
+    Anchors = [akTop, akRight]
+    BorderSpacing.Top = 8
+    BorderSpacing.Right = 8
+    ItemHeight = 0
+    TabOrder = 4
+    Text = 'Select device'
+    OnGetItems = DeviceSelect1GetItems
+  end
+  object Shape3: TShape
+    Tag = 3
+    AnchorSideLeft.Control = DeviceSelect3
+    AnchorSideTop.Control = DeviceSelect2
+    AnchorSideTop.Side = asrBottom
+    Left = 834
+    Height = 25
+    Top = 160
+    Width = 25
+    BorderSpacing.Top = 8
+    Brush.Color = 45824
+    OnMouseUp = Shape1MouseUp
+    Shape = stEllipse
+  end
+  object ShowCB3: TCheckBox
+    Tag = 3
+    AnchorSideLeft.Control = ShowCB1
+    AnchorSideTop.Control = Shape3
+    AnchorSideTop.Side = asrCenter
+    Left = 867
+    Height = 25
+    Top = 160
+    Width = 88
+    Caption = 'Zobrazit'
+    TabOrder = 5
+    OnChange = ShowCB1Change
+  end
+  object DeviceSelect3: TComboBox
+    Tag = 3
+    AnchorSideTop.Control = Shape3
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 834
+    Height = 35
+    Top = 193
+    Width = 191
+    Anchors = [akTop, akRight]
+    BorderSpacing.Top = 8
+    BorderSpacing.Right = 8
+    ItemHeight = 0
+    TabOrder = 6
+    Text = 'Select device'
+    OnGetItems = DeviceSelect1GetItems
+  end
+  object Shape4: TShape
+    Tag = 4
+    AnchorSideLeft.Control = DeviceSelect4
+    AnchorSideTop.Control = DeviceSelect3
+    AnchorSideTop.Side = asrBottom
+    Left = 834
+    Height = 25
+    Top = 236
+    Width = 25
+    BorderSpacing.Top = 8
+    Brush.Color = clRed
+    OnMouseUp = Shape1MouseUp
+    Shape = stEllipse
+  end
+  object ShowCB4: TCheckBox
+    Tag = 4
+    AnchorSideLeft.Control = ShowCB1
+    AnchorSideTop.Control = Shape4
+    AnchorSideTop.Side = asrCenter
+    Left = 867
+    Height = 25
+    Top = 236
+    Width = 88
+    Caption = 'Zobrazit'
+    TabOrder = 7
+    OnChange = ShowCB1Change
+  end
+  object DeviceSelect4: TComboBox
+    Tag = 4
+    AnchorSideTop.Control = Shape4
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 834
+    Height = 35
+    Top = 269
+    Width = 191
+    Anchors = [akTop, akRight]
+    BorderSpacing.Top = 8
+    BorderSpacing.Right = 8
+    ItemHeight = 0
+    TabOrder = 8
+    Text = 'Select device'
+    OnGetItems = DeviceSelect1GetItems
+  end
+  object Input: TEdit
+    AnchorSideLeft.Control = Output
+    AnchorSideRight.Control = ShapeInput
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 4
+    Height = 33
+    Top = 693
+    Width = 715
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Right = 4
+    BorderSpacing.Bottom = 4
+    TabOrder = 9
+    Text = 'Input'
+    OnChange = InputChange
+    OnUTF8KeyPress = InputUTF8KeyPress
+  end
+  object SendRG: TRadioGroup
+    AnchorSideLeft.Control = DeviceSelect1
+    AnchorSideTop.Control = DisplayTimeBtn
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = DeviceSelect1
+    AnchorSideRight.Side = asrBottom
+    Left = 834
+    Height = 100
+    Top = 434
+    Width = 191
+    Anchors = [akTop, akLeft, akRight]
+    AutoFill = True
+    AutoSize = True
+    BorderSpacing.Top = 8
+    Caption = 'Odeslat'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 75
+    ClientWidth = 187
+    ItemIndex = 1
+    Items.Strings = (
+      'Okamžitě'
+      'Po stisku Enter'
+      'HEX data'
+    )
+    TabOrder = 10
+  end
+  object EOLRG: TRadioGroup
+    AnchorSideLeft.Control = DeviceSelect1
+    AnchorSideTop.Control = SendRG
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = DeviceSelect1
+    AnchorSideRight.Side = asrBottom
+    Left = 834
+    Height = 75
+    Top = 542
+    Width = 191
+    Anchors = [akTop, akLeft, akRight]
+    AutoFill = True
+    AutoSize = True
+    BorderSpacing.Top = 8
+    Caption = 'Konec řádku'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 2
+    ClientHeight = 50
+    ClientWidth = 187
+    Columns = 2
+    ItemIndex = 0
+    Items.Strings = (
+      'LF'
+      'CR'
+      'CRLF'
+      'Není'
+    )
+    TabOrder = 11
+  end
+  object SendToCG: TCheckGroup
+    AnchorSideLeft.Control = DeviceSelect1
+    AnchorSideTop.Control = EOLRG
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = DeviceSelect1
+    AnchorSideRight.Side = asrBottom
+    Left = 834
+    Height = 87
+    Top = 625
+    Width = 191
+    Anchors = [akTop, akLeft, akRight]
+    AutoFill = True
+    AutoSize = True
+    BorderSpacing.Top = 8
+    Caption = 'Odeslat do'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 2
+    ClientHeight = 62
+    ClientWidth = 187
+    Columns = 2
+    Items.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+    )
+    TabOrder = 12
+    Data = {
+      0400000002020202
+    }
+  end
+  object SetBtn: TBitBtn
+    AnchorSideLeft.Control = DeviceSelect1
+    AnchorSideTop.Control = DeviceSelect4
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = DeviceSelect1
+    AnchorSideRight.Side = asrBottom
+    Left = 834
+    Height = 38
+    Top = 312
+    Width = 191
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 8
+    Caption = 'Nastavení'
+    Glyph.Data = {
+      36090000424D3609000000000000360000002800000018000000180000000100
+      2000000000000009000064000000640000000000000000000000000000000000
+      0000000000000000000000000000000000000000000100000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000020000
+      000A000000130000001A713D1D688C5229BA864E24AA2E1A0A320000001F0000
+      0019000000120000000900000000000000000000000200000005000000070000
+      000A0000000900000007000000040000000100000000000000000000000F0000
+      001A000000257947248FA7734CF4AB754BFFB5794CFF8E562ED6040400390000
+      002D00000023000000180000001400000010000000160000001C000000220000
+      002500000024000000200000001A000000140000000C000000050000000A0000
+      00145B371A46AB7751ECB67F54FF9A663FFFA4693CFFB0774BFB77421D8E0000
+      00240000001C000000120000000F0000000F000000160000001C000000221212
+      122A959896BEB1B3B2E7A1A4A2D45757572C0000000C00000005000000000000
+      00008D522596CFA685FFDEC3AEFFB57F54FF8C5D39FFA97044FF9F683FE07340
+      20280000000200000000000000000000000000000002000000053B3B3B0D9EA2
+      A1C0C7C7C7FDBCBCBCFFC7C7C7FF999E9CA30000000000000000000000000000
+      00008C4F2164AA7249F8D8B69CFFE7D4C4FFBA8E6CFF8B5C39FFAB764BFF9960
+      33D08049240E00000000000000000000000000000000AAAAAA039EA1A0BBD0D0
+      D0FDC9C9C9FFBFBFBFFFC9CACAFD989A9A860000000000000000000000000000
+      0000000000008C4F247A9C653CDCCA9C78FFDCBFA8FFBB9476FF8D5D39FFAC76
+      4DFF975D33C98844220F0000000000000000AAAAAA039FA3A2B7D5D5D5FDD6D6
+      D6FFD7D7D7FFD7D7D7FFA9ABAACF808080060000000000000000000000000000
+      000000000000000000008A4A2018955B31C2C2906BFCCBA180FFB68D6EFF9060
+      3BFFAC774DFF975D34C980552B06AAAAAA039EA2A1B3D7D7D7FBDBDBDBFFDCDC
+      DCFFDEDEDEFFAEB1B0D58888880F000000000000000000000000000000000000
+      0000000000000000000000000000AA55000392572DAAC08E69F6BB845AFFAF82
+      60FF99653EFFAB774EFD9253298A9DA2A0AFDBDCDCFBDEDEDEFFDFDFDFFFE3E3
+      E3FFB3B6B6DB8A8A8A1800000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000092562DA6C3916DFCBD87
+      5DFFB67E53FFB37F57FF946948EADEDFDFFAE2E2E2FFE5E5E5FFE8E8E8FFBABD
+      BCDF8E9595240000000000000000000000000000000000000000000000000000
+      00000000000000000000000000000000000000000000AA550003935B31BBCDA5
+      87FDCBA485FFA37453FFBEB1A9FFD4D0CFFFE9E9E9FFEDEDEDFFC3C5C5E38F95
+      9530000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000804040048E4E
+      2375976E4FD8B6A9A1FDCDC7C3FFC4BCB7FFDCD9D7FFC9CBCAE8969A963F0000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000868686159297956592979560808C8C149FA2
+      A19AE4E5E5F7E4E4E4FFBAB3ACFFCDC7C3FFBFB8B3FE99949075000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000A7A9A974CED0D0E6EBEBEBFFEAEAEAFFC7C9C9EAE4E5
+      E5F7E5E5E5FFEAEAEAFFEAEAEAFFB4ACA6FACCC6C1FEBEB5AFE69C8E89360000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000009DA09D5BDEDFDEF5EFEFEFFFEEEEEEFFEDEDEDFFEDEDEDFFEEEE
+      EEFFD9D9D9FFDFDFDFFFD6D7D7F19C9E9C71AA9F98C4CBC4C0FEB9B0AAE59B91
+      8733000000000000000000000000000000000000000000000000000000000000
+      000000000000B2B4B3CCE5E5E5FFDDDDDDFDCBCDCCF1CBCDCCF1E4E4E4FFDFDF
+      DFFFDFDFDFFFD5D5D5F49A9E9C81000000009999800AACA299C8C7C0BAFFB6AD
+      A6E4A59B93AAA0938A7600000000000000000000000000000000000000000000
+      000000000000C1C3C2E2DADBDBF69A9D9C9F838A8A238E92923FBABDBCE1EDED
+      EDFFEDEDEDFFC0C3C2E2AAAAAA030000000000000000A28B8B0BB0A49CD4C9C0
+      B8FFC3BAB1FFBBB0A8EDA3968C50000000000000000000000000000000000000
+      0000000000009A9E9DB89BA19F8A0000000000000000000000009294946EDFDF
+      DFFFE7E7E7FFCBCDCCEB848D841D000000000000000000000000AEA39BA3D5CA
+      C0FFCEC2B7FFCDC3B7FFB2A59CDA9E9286150000000000000000000000000000
+      00000000000000000000000000000000000000000000000000009296948DDCDC
+      DCFFDDDDDDFFBCBDBDE480808008000000000000000000000000A99D9265C7BB
+      B2E9DED1C5FFDDD0C3FFD9CCC0FFAB9D94BCFFFFFF0100000000000000000000
+      0000000000000000000000000000000000000000000093969661C3C5C5EBDFDF
+      DFFFE1E1E1FFA0A3A2AC0000000000000000000000000000000000000000A699
+      8F50BCAFA5DFDCD1C4FFD5C8BCFCA99B92C99F80800800000000000000000000
+      000000000000000000000000000000000000878B8B40BEC2C1F1E5E5E5FFD6D6
+      D6FBAAACACBF9292920E00000000000000000000000000000000000000000000
+      00009F958F30AD9F96DAAA9E93B1AA8080060000000000000000000000000000
+      000000000000000000000000000000000000FFFFFF019498967C969B9AA19194
+      945D808080020000000000000000000000000000000000000000000000000000
+      00000000000096968711FFFFFF01000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000
+    }
+    OnClick = SetBtnClick
+    TabOrder = 13
+  end
+  object EnCB1: TCheckBox
+    Tag = 1
+    AnchorSideTop.Control = Shape1
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = DeviceSelect1
+    AnchorSideRight.Side = asrBottom
+    Left = 1003
+    Height = 22
+    Top = 9
+    Width = 22
+    Anchors = [akTop, akRight]
+    TabOrder = 14
+    OnChange = EnCB1Change
+  end
+  object EnCB2: TCheckBox
+    Tag = 2
+    AnchorSideTop.Control = Shape2
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = DeviceSelect1
+    AnchorSideRight.Side = asrBottom
+    Left = 1003
+    Height = 22
+    Top = 85
+    Width = 22
+    Anchors = [akTop, akRight]
+    TabOrder = 15
+    OnChange = EnCB1Change
+  end
+  object EnCB3: TCheckBox
+    Tag = 3
+    AnchorSideTop.Control = Shape3
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = DeviceSelect1
+    AnchorSideRight.Side = asrBottom
+    Left = 1003
+    Height = 22
+    Top = 161
+    Width = 22
+    Anchors = [akTop, akRight]
+    TabOrder = 16
+    OnChange = EnCB1Change
+  end
+  object EnCB4: TCheckBox
+    Tag = 4
+    AnchorSideTop.Control = Shape4
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = DeviceSelect1
+    AnchorSideRight.Side = asrBottom
+    Left = 1003
+    Height = 22
+    Top = 237
+    Width = 22
+    Anchors = [akTop, akRight]
+    TabOrder = 17
+    OnChange = EnCB1Change
+  end
+  object ClearBtn: TBitBtn
+    AnchorSideLeft.Control = DeviceSelect1
+    AnchorSideTop.Control = SetBtn
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = DeviceSelect1
+    AnchorSideRight.Side = asrBottom
+    Left = 834
+    Height = 38
+    Top = 358
+    Width = 191
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 8
+    Caption = 'Vyčistit'
+    Glyph.Data = {
+      36040000424D3604000000000000360000002800000010000000100000000100
+      2000000000000004000064000000640000000000000000000000FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF003F3DED413B38EB08FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00211FE3081E1CE241FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF004A47F0414F4CF2FF403EEDFD3C39EB08FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF002725E5082422E4FC312FEAFF1F1DE241FFFFFF00FFFFFF00FFFFFF005451
+      F3415856F5FF6361FAFF5855F6FF413FEDFC3D3AEC08FFFFFF00FFFFFF00302D
+      E7082C2AE6FC413FF1FF4C4AF6FF312FEAFF1F1DE241FFFFFF00FFFFFF005956
+      F52B5B58F6FF6562FAFF7170FFFF5956F6FF4240EEFC3E3BEC083937EB083532
+      E9FC4745F2FF6362FFFF4A48F4FF2F2DE9FF2220E32BFFFFFF00FFFFFF00FFFF
+      FF005A57F52B5B59F6FF6663FAFF7471FFFF5A58F6FF4341EEFC3E3CECFD504D
+      F4FF6867FFFF504EF5FF3634EBFF2A27E52BFFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF005B58F62B5C5AF6FF6764FAFF7472FFFF7370FFFF706EFFFF6E6C
+      FFFF5755F7FF3F3DEEFF3230E82BFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF005C59F62B5D5BF7FF7976FFFF5956FFFF5754FFFF7270
+      FFFF4846F0FF3C39EB2BFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00615EF8085D5AF6FD7D79FFFF5E5BFFFF5B58FFFF7674
+      FFFF4643EFFD413FED08FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF006967FB086663F9FC706DFBFF807EFFFF7E7BFFFF7C79FFFF7977
+      FFFF5E5CF7FF4744EFFC4240EE08FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00716EFD086E6BFCFC7774FDFF8682FFFF7673FCFF6462F8FF605DF7FF6D6A
+      FAFF7B79FFFF605DF7FF4845EFFC4341EE08FFFFFF00FFFFFF00FFFFFF007673
+      FF087471FEFD7D7AFEFF8A87FFFF7C79FDFF6C69FBFF6361F92B5F5CF72B615E
+      F8FF6E6CFAFF7D7AFFFF615FF7FF4946F0FC4441EE05FFFFFF00FFFFFF007774
+      FF1F7A77FFFF817EFFFF817EFEFF7471FDFF6C69FB2BFFFFFF00FFFFFF00605D
+      F72B625FF8FF6F6DFBFF7E7CFFFF625FF8FF4A47F06F4542EE02FFFFFF00FFFF
+      FF007774FF1F7A77FFFF7976FEFF726FFD2BFFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00615EF82B6461F8FF6A68F9FF5451F3A84F4DF229FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF007774FF1F7774FF2BFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00625FF82B5D5BF76F5956F53EFFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF006360F80AFFFFFF00FFFFFF00FFFFFF00
+    }
+    OnClick = ClearBtnClick
+    TabOrder = 18
+  end
+  object DisplayTimeBtn: TSpeedButton
+    Tag = 1
+    AnchorSideLeft.Control = DeviceSelect1
+    AnchorSideTop.Control = ClearBtn
+    AnchorSideTop.Side = asrBottom
+    Left = 834
+    Height = 22
+    Top = 404
+    Width = 23
+    BorderSpacing.Top = 8
+    OnClick = DisplayTimeBtnClick
+  end
+  object DisplayTimeLabel: TLabel
+    AnchorSideLeft.Control = DisplayTimeBtn
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = DisplayTimeBtn
+    AnchorSideTop.Side = asrCenter
+    Left = 865
+    Height = 23
+    Top = 404
+    Width = 104
+    BorderSpacing.Left = 8
+    Caption = 'Zobrazit delta'
+  end
+  object HistoryBtn: TSpeedButton
+    AnchorSideTop.Control = Input
+    AnchorSideRight.Control = Output
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Input
+    AnchorSideBottom.Side = asrBottom
+    Left = 789
+    Height = 33
+    Top = 693
+    Width = 33
+    Anchors = [akTop, akRight, akBottom]
+    Glyph.Data = {
+      36040000424D3604000000000000360000002800000010000000100000000100
+      2000000000000004000064000000640000000000000000000000000000250000
+      0055000000550000005500000055000000550000005500000055000000550000
+      0055000000550000005500000021FFFFFF00FFFFFF00FFFFFF0000000055FBFB
+      FBFFFAFAFAFFF9F9F9FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFF00000055FFFFFF00FFFFFF00FFFFFF0000000055F7F7
+      F7FFF5F5F5FF3D4345FF35454BFF9DA0A1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFF00000055FFFFFF00FFFFFF00FFFFFF0000000055F7F7
+      F7FFF4F4F4FFAAACACFF89B0BCFF569FB5FF4A8292FFE2EEF1FFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFF00000055FFFFFF00FFFFFF00FFFFFF0000000055F7F7
+      F7FFF2F2F2FFF7F7F7FFA2B1B7FF82A2ADFF3D8196FF39B7DEFFF5FBFCFFFFFF
+      FFFFFFFFFFFFFFFFFFFF00000055FFFFFF00FFFFFF00FFFFFF0000000055F7F7
+      F7FFF0F0F0FFAAAAAAFF6F8E98FF2C697CFF252525FF3B9CBAFF3FB0D3FFAFB1
+      B1FFFFFFFFFFFFFFFFFF00000055FFFFFF00FFFFFF00FFFFFF0000000055F6F6
+      F6FFF0F0F0FFF2F2F2FFE5EDEFFF3EC9F5FF366C7DFF252626FF4EBBDEFF70CE
+      EBFFFFFFFFFFFFFFFFFF00000055FFFFFF00FFFFFF00FFFFFF0000000055F6F6
+      F6FFEFEFEFFFF0F0F0FFF3F3F3FFD8E7EBFF3ACCF8FF335A66FF282E31FF52C5
+      EAFF8ED7EEFFFFFFFFFF00000055FFFFFF00FFFFFF00FFFFFF0000000055F5F5
+      F5FFEEEEEEFFA6A6A6FFA7A7A7FFA9A9A9FF89A0A8FF34C6F3FF29434BFF2F3D
+      41FF49C8F1FFAAE2F5FF00000055FFFFFF00FFFFFF00FFFFFF0000000055F5F5
+      F5FFECECECFFEEEEEEFFEFEFEFFFF0F0F0FFF2F2F2FFAED0DBFF34C5F2FF2939
+      3EFF384F57FF53C9EDFF0E5D7783FFFFFF00FFFFFF00FFFFFF0000000055007A
+      00FF008500FF039007FF0D9A18FF15A429FF1BAB33FF1BAB33FF0D9256FF16B1
+      CCFF242E2FFF215750FF38C0EBF121AED82EFFFFFF00FFFFFF0000000055007C
+      00FF008800FF046608FF0C6E16FF137723FF187D2FFF187D2FFF137723FF067F
+      6CFF109FB4FF252829FF205D6FE053BDDDE85BA2B82AFFFFFF0000000055007D
+      00FF008A00FF08950FFF14A326FF20B13DFF2BBD52FF2BBD52FF20B13DFF14A3
+      26FF05A698FF088C98FF626263FFE1E1E1FF5FBFDCDD008DB90A00000055007E
+      00FFA6A6A6FFA6A6A6FFA6A6A6FF24B544FF32C55FFF32C55FFFA6A6A6FFA6A6
+      A6FFA2A5A6FF4DABADFFBDBFC0FE575757FF0B637FC4031216BE000000210000
+      0055EAEAEAFFEAEAEAFFEAEAEAFF000000550000005500000055EAEAEAFFEAEA
+      EAFFEAEAEAFF1B2B2F693FB4D9E3002F3ED0010101ED080808B3FFFFFF00FFFF
+      FF00777777FF777777FF797979FFFFFFFF00FFFFFF00FFFFFF00777777FF7777
+      77FF797979FFFFFFFF0000678620191D1FDE434242B83A393910
+    }
+    OnClick = HistoryBtnClick
+  end
+  object ShowAtOutputBtn: TSpeedButton
+    AnchorSideTop.Control = Input
+    AnchorSideRight.Control = HistoryBtn
+    AnchorSideBottom.Control = Input
+    AnchorSideBottom.Side = asrBottom
+    Left = 752
+    Height = 33
+    Top = 693
+    Width = 33
+    AllowAllUp = True
+    Anchors = [akTop, akRight, akBottom]
+    BorderSpacing.Right = 4
+    Down = True
+    Glyph.Data = {
+      36040000424D3604000000000000360000002800000010000000100000000100
+      2000000000000004000064000000640000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      00000000000000000000DCD7CE01DCD7CF20DCD8CF70DDD9D19FDDD9D09EDCD8
+      CF6DDCD8CF1D0000000000000000000000000000000000000000000000000000
+      000000000000DBD7CF0CDCD8D086E7E5DFE2F3F1E8F1EDE8D2F7EDE8D2F6F3F1
+      E9F0E7E4DEE0DCD8CF7FDDD8CF0A000000000000000000000000000000000000
+      0000DCD8CE1CDFDCD4BFF5F4F1F0F5F2E4FECBBA59FFC1AD05FFC1AD06FFCCBC
+      60FFF6F4E7FEF4F3F0EFDFDBD3B8DBD8CF17000000000000000000000000DCD7
+      CF17E1DDD6C8F9F9F8F5FEFEFDFFD2C478FFBEAA00FF988A00FF998B00FFBFAA
+      00FFD5C883FFFFFEFEFFF9F8F6F3E0DDD5C2DBD7CF1200000000AFA4912DC9C3
+      B6B9F3F2F0F0FFFFFFFFFDFDFBFFC4B02FFFAA9900FF646000FF656100FFAD9C
+      00FFC6B336FFFEFDFCFFFFFFFFFFF1F0EDEFC8C2B5B2AEA49129AEA38F23AEA4
+      90E6C8C1B5F8FCFCFBFCFEFEFCFFCBB951FFB8A500FF787000FF797100FFBAA6
+      00FFCEBD60FFFEFEFDFFFBFAFAFBC4BEB1F7AEA490E0AEA4911D00000000AEA4
+      903EAEA490EEC6BFB3F7F8F7F6FBEAE4C5FFC2AE1BFFC0AB00FFC0AB00FFC3AF
+      1FFFECE7CBFFF7F6F5FBC3BCAFF7AEA490EAAEA4903600000000000000000000
+      0000ADA38F39AEA490DFB8B09FFBE2E0D9F7EDE8D1FDDBD19FFEDCD19FFEEEE9
+      D3FCE1DED7F8B7AE9DFBAEA490DAAEA390320000000000000000000000000000
+      000000000000AEA48F19AEA490A1AEA490F8B5AB9AFAC6BFB3F9C5BEB1F9B4AB
+      99FBAEA490F6AEA4909AADA48F15000000000000000000000000000000000000
+      00000000000000000000ADA59001AEA49028AEA49074AEA4909EAEA4909DAEA4
+      9071ADA48F24ACA38F0100000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000
+    }
+    GroupIndex = 1
+    Images = ImageList1
+    ImageIndex = 0
+    OnClick = ShowAtOutputBtnClick
+    ShowCaption = False
+  end
+  object ShapeInput: TShape
+    Tag = 4
+    AnchorSideTop.Control = Input
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = ShowAtOutputBtn
+    Left = 723
+    Height = 25
+    Top = 697
+    Width = 25
+    Anchors = [akTop, akRight]
+    BorderSpacing.Top = 8
+    BorderSpacing.Right = 4
+    Brush.Color = 13107400
+    OnMouseUp = Shape1MouseUp
+    Shape = stCircle
+  end
+  object SynExporterHTML1: TSynExporterHTML
+    Color = clWindow
+    DefaultFilter = 'HTML Dokument (*.htm,*.html)|*.htm;*.html'
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'DejaVu Sans Mono'
+    HTMLFontSize = fs03
+    Title = 'Nepojmenovaný'
+    UseBackground = False
+    Left = 304
+    Top = 60
+  end
+  object DeviceListTimer: TTimer
+    OnTimer = DeviceListTimerTimer
+    Left = 152
+    Top = 60
+  end
+  object ColorDialog1: TColorDialog
+    Color = clBlack
+    CustomColors.Strings = (
+      'ColorA=000000'
+      'ColorB=000080'
+      'ColorC=008000'
+      'ColorD=008080'
+      'ColorE=800000'
+      'ColorF=800080'
+      'ColorG=808000'
+      'ColorH=808080'
+      'ColorI=C0C0C0'
+      'ColorJ=0000FF'
+      'ColorK=00FF00'
+      'ColorL=00FFFF'
+      'ColorM=FF0000'
+      'ColorN=FF00FF'
+      'ColorO=FFFF00'
+      'ColorP=FFFFFF'
+      'ColorQ=C0DCC0'
+      'ColorR=F0CAA6'
+      'ColorS=F0FBFF'
+      'ColorT=A4A0A0'
+    )
+    Left = 448
+    Top = 60
+  end
+  object ImageList1: TImageList
+    Left = 568
+    Top = 60
+    Bitmap = {
+      4C7A020000001000000010000000230300000000000078DAED93BD4F536114C6
+      6F071D0C93892144882638E0404C184858F81F1CDD30D1D184260EC2C2600244
+      87B60BD8424B4A5B074B6F0B8202E9F707A929D0968214686921084884B694F6
+      DE72DB7B7CEED5410CC1D5184FF24B4FCFC773DE8FFB32CCBF65368B5AC19AD5
+      2DE03930003D50DACCAA7B132695E2AA5ED6AC6A40AD11F03356DDF982E77D25
+      E49EAC4C5BB5026265A083CEAD4BE79A541DC867661D63C26E76833B3E8CD7B6
+      E263620A9C7C4D5477B6D7F98FAC5ED2D9644DEAB68B73D59DE004F3389E2B0B
+      477B21F2B3B7C96B656402F63BF4ED20425CB924049C760EB547A05DEE35A99A
+      E1EF877D337CB52A5445B14A91B987346B61E84537433D4A86E6DF32B4ECEA22
+      51AC91707E2E04DD93924696356B9AEC664DEBA7C087B9E2693E4FB05A4DA0A0
+      E301BDD332F4A48BA1A78F19B28D32B4F0BE9DC45A552AA142FE3817F6CF4CA1
+      FFBEB486D47AB47E27FD395CA9F02569C64AF005B9DF31F4E61543DAD70C79E0
+      AF855F12164015BE5CCCA6D7FC5BEBD19BBF9E412AB9DC9849AD7A4A67857CE9
+      744F8CCC3F229FED1AB84E8BCE2E2A9F1D8867C57C2EB39598DD4A46EB2FBB03
+      68D6A592B1FE832F99DD62E1B0707CB8827B5829170B5FF3077BDBD95432DA97
+      4E466F5CF50DA4D69715D8CF5DD476A737E263E98D9801FE33D0C4FCB7BFDEF4
+      7ABD02B480E7C0A0FF614A706F747454F187DE066004BCD1683C6759B662B3D9
+      2AF005C4CA40072E7DFFD0EE402E63369B05BFDFCF0583C1DAF4F4B428110A85
+      AA5EAF9737994C92CE2668FB6D6E2738C13C2E168B093E9F8F46464648ABD5CA
+      487E2010A068342A4C4C4C70A83D02ED3F7B9BC1BEDD6EE713894475757595C6
+      C7C7696868887A7A7AA8B7B797868787C962B190948BC7E302F6246964411368
+      75381C734B4B4B79290F0D428CD46A3529954A198D4643068341CE4935914824
+      877953A893DFBFD3E9ACC7FEC2D02E4979ABD52AAF7B606080060707651F33E5
+      5EECAFE8F178FCE8B9F0FEF1BF11718FB40EE88B3847D2E97432D2DA17171745
+      E472289995E65D760788D7B95CAE7E9CF72E340AF8E540197E1EF79145BE0F5C
+      F9FE915780BBA0DBED768F41CF00FF19F827DFFF77C398A939
+    }
+  end
+end

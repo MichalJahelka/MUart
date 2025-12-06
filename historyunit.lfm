@@ -1,0 +1,28 @@
+object HistoryForm: THistoryForm
+  Left = 645
+  Height = 704
+  Top = 102
+  Width = 605
+  Caption = 'HistoryForm'
+  ClientHeight = 704
+  ClientWidth = 605
+  LCLVersion = '3.6.0.0'
+  object ListBox1: TListBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 0
+    Height = 704
+    Top = 0
+    Width = 605
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ItemHeight = 0
+    TabOrder = 0
+    TopIndex = -1
+    OnClick = ListBox1Click
+    OnDblClick = ListBox1DblClick
+  end
+end
